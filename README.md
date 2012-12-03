@@ -11,7 +11,10 @@ not done yet :P), clone the git repo, and throw this in `sbt console`:
 scala> import me.elrod.RefHeap.{RefHeapClient, RefHeapPaste}
 import me.elrod.RefHeap.{RefHeapClient, RefHeapPaste}
 
-scala> val x = new RefHeapClient("yourusername", "your-key").paste(RefHeapPaste("PHP", true, "<?php echo 'hello!'; $foo = false;"))
+scala> val paste = RefHeapPaste("PHP", true, "<?php echo 'hello!'; $foo = false;")
+paste: me.elrod.RefHeap.RefHeapPaste = Private PHP Paste
+
+scala> val x = new RefHeapClient("yourusername", "your-key").paste(paste)
 x: dispatch.Promise[me.elrod.RefHeap.RefHeapPaste] = Promise(-incomplete-)
 ```
 
