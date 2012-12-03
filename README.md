@@ -21,7 +21,8 @@ x: dispatch.Promise[me.elrod.RefHeap.RefHeapPaste] = Promise(-incomplete-)
 See the scaladoc for what to do with the result, but the gist of it is:
 
 ```scala
-x.completeOption // This will be an Option[RefHeapPaste] which you can call .getOrElse on and handle appropriately.
+// This will be an Option[RefHeapPaste] which you can call .getOrElse on and handle appropriately.
+x.completeOption
 ```
 
 # License
